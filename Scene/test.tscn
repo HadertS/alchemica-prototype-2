@@ -8,5 +8,5 @@
 [node name="Player" parent="." unique_id=1600506789 instance=ExtResource("1_fqvlb")]
 position = Vector2(531, 365)
 
-[node name="Table" parent="." unique_id=1533456843 instance=ExtResource("2_o6ksy")]
+[node name="Table" parent="." unique_id=1271640313 instance=ExtResource("2_o6ksy")]
 position = Vector2(413, 227)
