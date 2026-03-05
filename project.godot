@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Alchemica prototype 2"
-run/main_scene="uid://di73vmar74f7t"
+run/main_scene="uid://da41akhdk20uv"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
