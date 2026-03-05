@@ -11,6 +11,8 @@ func tick(delta: float):
 		return
 	if interact_pressed:
 		var hit = interactor.get_collider()
-		if "interactable_component" in hit:
-			hit.interactable_component.interact()
+		if hit != null and "interactable_component" in hit:
+			var interactable_component = hit.interactable_component as InteractableComponent
+			if interactable_component != null:
+				interactable_component.interact()
 		return
