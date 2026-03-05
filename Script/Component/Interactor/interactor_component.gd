@@ -1,0 +1,17 @@
+class_name InteractorComponent extends Node
+
+@export var body: CharacterBody2D
+@export var interactor: RayCast2D
+signal intereaction(collider)
+
+
+var interact_pressed: bool = false
+
+func tick(delta: float):
+	if body == null or interactor == null:
+		return
+	if interact_pressed:
+		var hit = interactor.get_collider()
+		if hit != null and hit.get_node("%InteractableComponent"):
+			hit.get_node("%InteractableComponent").interact()
+		return

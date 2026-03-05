@@ -15,4 +15,6 @@ func tick(delta: float) -> void:
     body.move_and_slide()
     if model and direction.length() > 0.001:
         var look_direction := direction.normalized()
+
+        # Look at the direction of the movement
         model.look_at(model.global_position + look_direction)

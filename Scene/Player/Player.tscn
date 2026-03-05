@@ -3,20 +3,29 @@
 [ext_resource type="Script" uid="uid://cowv4uwt1ie44" path="res://Script/Component/Input/input_component.gd" id="1_dsw18"]
 [ext_resource type="Script" uid="uid://b7dogybbs6mp8" path="res://Scene/Player/player.gd" id="1_s60e6"]
 [ext_resource type="Script" uid="uid://dh4p5icbb8ey2" path="res://Script/Component/Movement/movement_component.gd" id="3_e35vl"]
-
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_e35vl"]
+[ext_resource type="Script" uid="uid://du44dh37jbunj" path="res://Script/Component/Interactor/interactor_component.gd" id="4_g0r71"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_p7e0v"]
 
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_e35vl"]
+
 [node name="Player" type="CharacterBody2D" unique_id=1600506789]
 script = ExtResource("1_s60e6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1401500638]
+scale = Vector2(1, 0.99999994)
+shape = SubResource("CircleShape2D_p7e0v")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1012548402]
 scale = Vector2(20, 20.000002)
 texture = SubResource("PlaceholderTexture2D_e35vl")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1401500638]
-shape = SubResource("CircleShape2D_p7e0v")
+[node name="RayCast2D" type="RayCast2D" parent="Sprite2D" unique_id=1253393092]
+scale = Vector2(0.05, 0.049999986)
+target_position = Vector2(57, 0)
+hit_from_inside = true
+collide_with_areas = true
+collide_with_bodies = false
 
 [node name="InputComponent" type="Node" parent="." unique_id=1789717901]
 unique_name_in_owner = true
@@ -27,4 +36,10 @@ unique_name_in_owner = true
 script = ExtResource("3_e35vl")
 body = NodePath("..")
 model = NodePath("../Sprite2D")
-speed = 200.0
+speed = 250.0
+
+[node name="InteractorComponent" type="Node" parent="." unique_id=2095045384 node_paths=PackedStringArray("body", "interactor")]
+unique_name_in_owner = true
+script = ExtResource("4_g0r71")
+body = NodePath("..")
+interactor = NodePath("../Sprite2D/RayCast2D")

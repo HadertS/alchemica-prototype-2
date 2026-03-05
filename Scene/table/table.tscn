@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://dd47nqvkaaie1"]
+
+[ext_resource type="Script" uid="uid://bxsc2t3isquln" path="res://Scene/table/table.gd" id="1_0fxme"]
+[ext_resource type="Script" uid="uid://dkfe3g53p3eep" path="res://Script/Component/Interactable/interactable_component.gd" id="2_t2dyc"]
+[ext_resource type="Script" uid="uid://scrn4h2met3q" path="res://Scene/table/action_open_table_screen.gd" id="3_d1yfk"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_boox8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qj2di"]
+size = Vector2(20, 10)
+
+[node name="Table" type="Area2D" unique_id=1533456843]
+scale = Vector2(2, 2)
+script = ExtResource("1_0fxme")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1458120847]
+scale = Vector2(20, 10)
+texture = SubResource("PlaceholderTexture2D_boox8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1586673101]
+shape = SubResource("RectangleShape2D_qj2di")
+debug_color = Color(0.26743254, 0.65230197, 1.92523e-07, 0.41960785)
+
+[node name="InteractableComponent" type="Node" parent="." unique_id=1202816227]
+unique_name_in_owner = true
+script = ExtResource("2_t2dyc")
+
+[node name="ActionOpenTable" type="Node" parent="InteractableComponent" unique_id=148359516]
+script = ExtResource("3_d1yfk")
