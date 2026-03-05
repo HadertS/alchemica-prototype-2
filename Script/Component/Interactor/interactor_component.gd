@@ -2,7 +2,6 @@ class_name InteractorComponent extends Node
 
 @export var body: CharacterBody2D
 @export var interactor: RayCast2D
-signal intereaction(collider)
 
 
 var interact_pressed: bool = false
