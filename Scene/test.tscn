@@ -1,8 +1,8 @@
-[gd_scene format=3 uid="uid://da41akhdk20uv"]
+[gd_scene load_steps=0 format=3 uid="uid://da41akhdk20uv"]
 
-[ext_resource type="PackedScene" uid="uid://di73vmar74f7t" path="res://Scene/Player/Player.tscn" id="1_wsa5o"]
+[ext_resource type="PackedScene" uid="uid://di73vmar74f7t" path="res://Scene/Player/player.tscn" id="1_fqvlb"]
 
 [node name="Test" type="Node2D" unique_id=1149477348]
 
-[node name="Player" parent="." unique_id=1600506789 instance=ExtResource("1_wsa5o")]
+[node name="Player" parent="." unique_id=1600506789 instance=ExtResource("1_fqvlb")]
 position = Vector2(531, 365)

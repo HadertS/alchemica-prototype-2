@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://di73vmar74f7t"]
+[gd_scene format=3 uid="uid://dkb7o26qa3s5y"]
 
 [ext_resource type="Script" uid="uid://cowv4uwt1ie44" path="res://Script/Component/Input/input_component.gd" id="1_dsw18"]
 [ext_resource type="Script" uid="uid://b7dogybbs6mp8" path="res://Scene/Player/player.gd" id="1_s60e6"]
