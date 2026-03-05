@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://di73vmar74f7t"]
+
+[ext_resource type="Script" uid="uid://cowv4uwt1ie44" path="res://Script/Component/Input/input_component.gd" id="1_dsw18"]
+[ext_resource type="Script" uid="uid://b7dogybbs6mp8" path="res://Scene/Player/player.gd" id="1_s60e6"]
+[ext_resource type="Script" uid="uid://dh4p5icbb8ey2" path="res://Script/Component/Movement/movement_component.gd" id="3_e35vl"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_e35vl"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_p7e0v"]
+
+[node name="Player" type="CharacterBody2D" unique_id=1600506789]
+script = ExtResource("1_s60e6")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1012548402]
+scale = Vector2(20, 20.000002)
+texture = SubResource("PlaceholderTexture2D_e35vl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1401500638]
+shape = SubResource("CircleShape2D_p7e0v")
+
+[node name="InputComponent" type="Node" parent="." unique_id=1789717901]
+unique_name_in_owner = true
+script = ExtResource("1_dsw18")
+
+[node name="MovementComponent" type="Node" parent="." unique_id=1092505381 node_paths=PackedStringArray("body")]
+unique_name_in_owner = true
+script = ExtResource("3_e35vl")
+body = NodePath("..")
