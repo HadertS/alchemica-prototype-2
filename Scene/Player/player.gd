@@ -5,6 +5,9 @@ extends CharacterBody2D
 @onready var interactor_component: InteractorComponent = %InteractorComponent
 @onready var inventory_component: InventoryComponent = %InventoryComponent
 
+func _ready() -> void:
+	inventory_component.create_inventory_slots()
+
 func _physics_process(delta: float):
 	input_component.update()
 	movement_component.direction = input_component.move_direction
