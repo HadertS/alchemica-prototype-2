@@ -1,0 +1,186 @@
+[gd_scene format=3 uid="uid://b6gtyck0vs30b"]
+
+[ext_resource type="Script" uid="uid://di76grknaovk6" path="res://Scene/Table/Table GUI/table_gui.gd" id="1_o7wvd"]
+[ext_resource type="Script" uid="uid://cowv4uwt1ie44" path="res://Script/Component/Input/input_component.gd" id="3_21c7h"]
+[ext_resource type="PackedScene" uid="uid://2uy7x0uic6mt" path="res://Scene/Table/Table GUI/table_slot.tscn" id="3_tmp5f"]
+[ext_resource type="Script" uid="uid://cy2cjubx4hc5w" path="res://Scene/Table/Table GUI/table_info_panel.gd" id="4_tmp5f"]
+
+[node name="TableGui" type="BoxContainer" unique_id=515171674]
+offset_right = 1152.0
+offset_bottom = 648.0
+script = ExtResource("1_o7wvd")
+
+[node name="InputComponent" type="Node" parent="." unique_id=24936949]
+unique_name_in_owner = true
+script = ExtResource("3_21c7h")
+metadata/_custom_type_script = "uid://cowv4uwt1ie44"
+
+[node name="TableSlotContainer" type="GridContainer" parent="." unique_id=1522947668]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+columns = 8
+
+[node name="Slot1" parent="TableSlotContainer" unique_id=1262460678 instance=ExtResource("3_tmp5f")]
+layout_mode = 2
+
+[node name="Slot2" parent="TableSlotContainer" unique_id=1060063641 instance=ExtResource("3_tmp5f")]
+layout_mode = 2
+
+[node name="Slot3" parent="TableSlotContainer" unique_id=702213230 instance=ExtResource("3_tmp5f")]
+layout_mode = 2
+
+[node name="Slot4" parent="TableSlotContainer" unique_id=187246420 instance=ExtResource("3_tmp5f")]
+layout_mode = 2
+
+[node name="Slot5" parent="TableSlotContainer" unique_id=1758469463 instance=ExtResource("3_tmp5f")]
+layout_mode = 2
+
+[node name="Slot6" parent="TableSlotContainer" unique_id=1098164876 instance=ExtResource("3_tmp5f")]
+layout_mode = 2
+
+[node name="Slot7" parent="TableSlotContainer" unique_id=1285300666 instance=ExtResource("3_tmp5f")]
+layout_mode = 2
+
+[node name="Slot8" parent="TableSlotContainer" unique_id=177872791 instance=ExtResource("3_tmp5f")]
+layout_mode = 2
+
+[node name="Slot9" parent="TableSlotContainer" unique_id=1283758815 instance=ExtResource("3_tmp5f")]
+layout_mode = 2
+
+[node name="Slot10" parent="TableSlotContainer" unique_id=1976341275 instance=ExtResource("3_tmp5f")]
+layout_mode = 2
+
+[node name="Slot11" parent="TableSlotContainer" unique_id=154009845 instance=ExtResource("3_tmp5f")]
+layout_mode = 2
+
+[node name="Slot12" parent="TableSlotContainer" unique_id=1150032870 instance=ExtResource("3_tmp5f")]
+layout_mode = 2
+
+[node name="Slot13" parent="TableSlotContainer" unique_id=428180629 instance=ExtResource("3_tmp5f")]
+layout_mode = 2
+
+[node name="Slot14" parent="TableSlotContainer" unique_id=1401369741 instance=ExtResource("3_tmp5f")]
+layout_mode = 2
+
+[node name="Slot15" parent="TableSlotContainer" unique_id=1704279203 instance=ExtResource("3_tmp5f")]
+layout_mode = 2
+
+[node name="Slot16" parent="TableSlotContainer" unique_id=228299643 instance=ExtResource("3_tmp5f")]
+layout_mode = 2
+
+[node name="Slot17" parent="TableSlotContainer" unique_id=49652239 instance=ExtResource("3_tmp5f")]
+layout_mode = 2
+
+[node name="Slot18" parent="TableSlotContainer" unique_id=704341584 instance=ExtResource("3_tmp5f")]
+layout_mode = 2
+
+[node name="Slot19" parent="TableSlotContainer" unique_id=136278208 instance=ExtResource("3_tmp5f")]
+layout_mode = 2
+
+[node name="Slot20" parent="TableSlotContainer" unique_id=712436060 instance=ExtResource("3_tmp5f")]
+layout_mode = 2
+
+[node name="Slot21" parent="TableSlotContainer" unique_id=600635845 instance=ExtResource("3_tmp5f")]
+layout_mode = 2
+
+[node name="Slot22" parent="TableSlotContainer" unique_id=802859225 instance=ExtResource("3_tmp5f")]
+layout_mode = 2
+
+[node name="Slot23" parent="TableSlotContainer" unique_id=1755594004 instance=ExtResource("3_tmp5f")]
+layout_mode = 2
+
+[node name="Slot24" parent="TableSlotContainer" unique_id=1141914995 instance=ExtResource("3_tmp5f")]
+layout_mode = 2
+
+[node name="Slot25" parent="TableSlotContainer" unique_id=670073077 instance=ExtResource("3_tmp5f")]
+layout_mode = 2
+
+[node name="Slot26" parent="TableSlotContainer" unique_id=488647495 instance=ExtResource("3_tmp5f")]
+layout_mode = 2
+
+[node name="Slot27" parent="TableSlotContainer" unique_id=13363656 instance=ExtResource("3_tmp5f")]
+layout_mode = 2
+
+[node name="Slot28" parent="TableSlotContainer" unique_id=1617313179 instance=ExtResource("3_tmp5f")]
+layout_mode = 2
+
+[node name="Slot29" parent="TableSlotContainer" unique_id=528054512 instance=ExtResource("3_tmp5f")]
+layout_mode = 2
+
+[node name="Slot30" parent="TableSlotContainer" unique_id=370796494 instance=ExtResource("3_tmp5f")]
+layout_mode = 2
+
+[node name="Slot31" parent="TableSlotContainer" unique_id=1533317572 instance=ExtResource("3_tmp5f")]
+layout_mode = 2
+
+[node name="Slot32" parent="TableSlotContainer" unique_id=799863479 instance=ExtResource("3_tmp5f")]
+layout_mode = 2
+
+[node name="Slot33" parent="TableSlotContainer" unique_id=671000966 instance=ExtResource("3_tmp5f")]
+layout_mode = 2
+
+[node name="Slot34" parent="TableSlotContainer" unique_id=2064700262 instance=ExtResource("3_tmp5f")]
+layout_mode = 2
+
+[node name="Slot35" parent="TableSlotContainer" unique_id=1013658438 instance=ExtResource("3_tmp5f")]
+layout_mode = 2
+
+[node name="Slot36" parent="TableSlotContainer" unique_id=8518404 instance=ExtResource("3_tmp5f")]
+layout_mode = 2
+
+[node name="Slot37" parent="TableSlotContainer" unique_id=2145595454 instance=ExtResource("3_tmp5f")]
+layout_mode = 2
+
+[node name="Slot38" parent="TableSlotContainer" unique_id=809204517 instance=ExtResource("3_tmp5f")]
+layout_mode = 2
+
+[node name="Slot39" parent="TableSlotContainer" unique_id=1802837552 instance=ExtResource("3_tmp5f")]
+layout_mode = 2
+
+[node name="Slot40" parent="TableSlotContainer" unique_id=1126287607 instance=ExtResource("3_tmp5f")]
+layout_mode = 2
+
+[node name="Slot41" parent="TableSlotContainer" unique_id=741343496 instance=ExtResource("3_tmp5f")]
+layout_mode = 2
+
+[node name="Slot42" parent="TableSlotContainer" unique_id=791594111 instance=ExtResource("3_tmp5f")]
+layout_mode = 2
+
+[node name="Slot43" parent="TableSlotContainer" unique_id=1421513293 instance=ExtResource("3_tmp5f")]
+layout_mode = 2
+
+[node name="Slot44" parent="TableSlotContainer" unique_id=673978387 instance=ExtResource("3_tmp5f")]
+layout_mode = 2
+
+[node name="Slot45" parent="TableSlotContainer" unique_id=25215394 instance=ExtResource("3_tmp5f")]
+layout_mode = 2
+
+[node name="Slot46" parent="TableSlotContainer" unique_id=2041870561 instance=ExtResource("3_tmp5f")]
+layout_mode = 2
+
+[node name="Slot47" parent="TableSlotContainer" unique_id=1643484605 instance=ExtResource("3_tmp5f")]
+layout_mode = 2
+
+[node name="Slot48" parent="TableSlotContainer" unique_id=1257610330 instance=ExtResource("3_tmp5f")]
+layout_mode = 2
+
+[node name="InfoPanel" type="PanelContainer" parent="." unique_id=781139067]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+script = ExtResource("4_tmp5f")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="InfoPanel" unique_id=1542829020]
+layout_mode = 2
+
+[node name="TargetLabel" type="Label" parent="InfoPanel/VBoxContainer" unique_id=817367768]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Target Item"
+
+[node name="TargetContentLabel" type="Label" parent="InfoPanel/VBoxContainer" unique_id=1668701762]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Target Content"

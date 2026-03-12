@@ -17,7 +17,4 @@ func update():
     inventory_pressed = Input.is_action_just_pressed("ui_inventory")
     
     mouse_position = get_viewport().get_mouse_position()
-    mouse_clicked = Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT)
-
-
-
+    mouse_clicked = Input.is_action_just_pressed("click")
