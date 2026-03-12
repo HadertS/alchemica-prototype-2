@@ -3,7 +3,11 @@
 [ext_resource type="Script" uid="uid://di76grknaovk6" path="res://Scene/Table/Table GUI/table_gui.gd" id="1_o7wvd"]
 [ext_resource type="Script" uid="uid://cowv4uwt1ie44" path="res://Script/Component/Input/input_component.gd" id="3_21c7h"]
 [ext_resource type="PackedScene" uid="uid://2uy7x0uic6mt" path="res://Scene/Table/Table GUI/table_slot.tscn" id="3_tmp5f"]
+[ext_resource type="Script" uid="uid://b80htpygi6s0m" path="res://Scene/Table/Table GUI/table_slot_container.gd" id="3_vtihk"]
 [ext_resource type="Script" uid="uid://cy2cjubx4hc5w" path="res://Scene/Table/Table GUI/table_info_panel.gd" id="4_tmp5f"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_tmp5f"]
+font_size = 12
 
 [node name="TableGui" type="BoxContainer" unique_id=515171674]
 offset_right = 1152.0
@@ -21,6 +25,7 @@ layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 columns = 8
+script = ExtResource("3_vtihk")
 
 [node name="Slot1" parent="TableSlotContainer" unique_id=1262460678 instance=ExtResource("3_tmp5f")]
 layout_mode = 2
@@ -166,21 +171,542 @@ layout_mode = 2
 [node name="Slot48" parent="TableSlotContainer" unique_id=1257610330 instance=ExtResource("3_tmp5f")]
 layout_mode = 2
 
-[node name="InfoPanel" type="PanelContainer" parent="." unique_id=781139067]
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=400309714]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="InfoPanel" type="PanelContainer" parent="VBoxContainer" unique_id=781139067]
 unique_name_in_owner = true
+custom_minimum_size = Vector2(200, 200)
 layout_mode = 2
 size_flags_horizontal = 3
 script = ExtResource("4_tmp5f")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="InfoPanel" unique_id=1542829020]
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/InfoPanel" unique_id=1542829020]
 layout_mode = 2
 
-[node name="TargetLabel" type="Label" parent="InfoPanel/VBoxContainer" unique_id=817367768]
+[node name="SelectedLabel" type="Label" parent="VBoxContainer/InfoPanel/VBoxContainer" unique_id=817367768]
 unique_name_in_owner = true
 layout_mode = 2
 text = "Target Item"
 
-[node name="TargetContentLabel" type="Label" parent="InfoPanel/VBoxContainer" unique_id=1668701762]
+[node name="SelectedContentLabel" type="Label" parent="VBoxContainer/InfoPanel/VBoxContainer" unique_id=1668701762]
 unique_name_in_owner = true
 layout_mode = 2
 text = "Target Content"
+
+[node name="InventoryGrid" type="GridContainer" parent="VBoxContainer" unique_id=741583364]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+columns = 5
+
+[node name="Panel" type="Panel" parent="VBoxContainer/InventoryGrid" unique_id=726894010]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/InventoryGrid/Panel" unique_id=1367069074]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Inventory
+Item"
+label_settings = SubResource("LabelSettings_tmp5f")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel2" type="Panel" parent="VBoxContainer/InventoryGrid" unique_id=235377481]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/InventoryGrid/Panel2" unique_id=267670154]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Inventory
+Item"
+label_settings = SubResource("LabelSettings_tmp5f")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel3" type="Panel" parent="VBoxContainer/InventoryGrid" unique_id=58623718]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/InventoryGrid/Panel3" unique_id=771540051]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Inventory
+Item"
+label_settings = SubResource("LabelSettings_tmp5f")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel4" type="Panel" parent="VBoxContainer/InventoryGrid" unique_id=258190975]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/InventoryGrid/Panel4" unique_id=1671789741]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Inventory
+Item"
+label_settings = SubResource("LabelSettings_tmp5f")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel5" type="Panel" parent="VBoxContainer/InventoryGrid" unique_id=1352360080]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/InventoryGrid/Panel5" unique_id=1341981583]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Inventory
+Item"
+label_settings = SubResource("LabelSettings_tmp5f")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel6" type="Panel" parent="VBoxContainer/InventoryGrid" unique_id=1673439019]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/InventoryGrid/Panel6" unique_id=1146190800]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Inventory
+Item"
+label_settings = SubResource("LabelSettings_tmp5f")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel7" type="Panel" parent="VBoxContainer/InventoryGrid" unique_id=443793419]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/InventoryGrid/Panel7" unique_id=166009469]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Inventory
+Item"
+label_settings = SubResource("LabelSettings_tmp5f")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel8" type="Panel" parent="VBoxContainer/InventoryGrid" unique_id=1282691972]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/InventoryGrid/Panel8" unique_id=380043225]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Inventory
+Item"
+label_settings = SubResource("LabelSettings_tmp5f")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel9" type="Panel" parent="VBoxContainer/InventoryGrid" unique_id=861165986]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/InventoryGrid/Panel9" unique_id=1141764118]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Inventory
+Item"
+label_settings = SubResource("LabelSettings_tmp5f")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel10" type="Panel" parent="VBoxContainer/InventoryGrid" unique_id=1792375531]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/InventoryGrid/Panel10" unique_id=1861550323]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Inventory
+Item"
+label_settings = SubResource("LabelSettings_tmp5f")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel11" type="Panel" parent="VBoxContainer/InventoryGrid" unique_id=565054250]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/InventoryGrid/Panel11" unique_id=2088555200]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Inventory
+Item"
+label_settings = SubResource("LabelSettings_tmp5f")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel12" type="Panel" parent="VBoxContainer/InventoryGrid" unique_id=1631151683]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/InventoryGrid/Panel12" unique_id=106822055]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Inventory
+Item"
+label_settings = SubResource("LabelSettings_tmp5f")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel13" type="Panel" parent="VBoxContainer/InventoryGrid" unique_id=1996483085]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/InventoryGrid/Panel13" unique_id=1131621520]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Inventory
+Item"
+label_settings = SubResource("LabelSettings_tmp5f")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel14" type="Panel" parent="VBoxContainer/InventoryGrid" unique_id=318675871]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/InventoryGrid/Panel14" unique_id=184444637]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Inventory
+Item"
+label_settings = SubResource("LabelSettings_tmp5f")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel15" type="Panel" parent="VBoxContainer/InventoryGrid" unique_id=1178120310]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/InventoryGrid/Panel15" unique_id=63967052]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Inventory
+Item"
+label_settings = SubResource("LabelSettings_tmp5f")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel16" type="Panel" parent="VBoxContainer/InventoryGrid" unique_id=833743346]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/InventoryGrid/Panel16" unique_id=1397170156]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Inventory
+Item"
+label_settings = SubResource("LabelSettings_tmp5f")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel17" type="Panel" parent="VBoxContainer/InventoryGrid" unique_id=2081300698]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/InventoryGrid/Panel17" unique_id=463867247]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Inventory
+Item"
+label_settings = SubResource("LabelSettings_tmp5f")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel18" type="Panel" parent="VBoxContainer/InventoryGrid" unique_id=797958268]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/InventoryGrid/Panel18" unique_id=1252123582]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Inventory
+Item"
+label_settings = SubResource("LabelSettings_tmp5f")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel19" type="Panel" parent="VBoxContainer/InventoryGrid" unique_id=1774200406]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/InventoryGrid/Panel19" unique_id=1727665802]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Inventory
+Item"
+label_settings = SubResource("LabelSettings_tmp5f")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel20" type="Panel" parent="VBoxContainer/InventoryGrid" unique_id=893803285]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/InventoryGrid/Panel20" unique_id=1711361225]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Inventory
+Item"
+label_settings = SubResource("LabelSettings_tmp5f")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel21" type="Panel" parent="VBoxContainer/InventoryGrid" unique_id=996319757]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/InventoryGrid/Panel21" unique_id=1050058028]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Inventory
+Item"
+label_settings = SubResource("LabelSettings_tmp5f")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel22" type="Panel" parent="VBoxContainer/InventoryGrid" unique_id=956952510]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/InventoryGrid/Panel22" unique_id=679128860]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Inventory
+Item"
+label_settings = SubResource("LabelSettings_tmp5f")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel23" type="Panel" parent="VBoxContainer/InventoryGrid" unique_id=977221406]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/InventoryGrid/Panel23" unique_id=234286234]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Inventory
+Item"
+label_settings = SubResource("LabelSettings_tmp5f")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel24" type="Panel" parent="VBoxContainer/InventoryGrid" unique_id=734189351]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/InventoryGrid/Panel24" unique_id=803854410]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Inventory
+Item"
+label_settings = SubResource("LabelSettings_tmp5f")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel25" type="Panel" parent="VBoxContainer/InventoryGrid" unique_id=1688860741]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/InventoryGrid/Panel25" unique_id=1312653468]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Inventory
+Item"
+label_settings = SubResource("LabelSettings_tmp5f")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel26" type="Panel" parent="VBoxContainer/InventoryGrid" unique_id=1025529382]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/InventoryGrid/Panel26" unique_id=1277100406]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Inventory
+Item"
+label_settings = SubResource("LabelSettings_tmp5f")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel27" type="Panel" parent="VBoxContainer/InventoryGrid" unique_id=1674210539]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/InventoryGrid/Panel27" unique_id=1176133886]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Inventory
+Item"
+label_settings = SubResource("LabelSettings_tmp5f")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel28" type="Panel" parent="VBoxContainer/InventoryGrid" unique_id=1826472417]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/InventoryGrid/Panel28" unique_id=1514863344]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Inventory
+Item"
+label_settings = SubResource("LabelSettings_tmp5f")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel29" type="Panel" parent="VBoxContainer/InventoryGrid" unique_id=1650645958]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/InventoryGrid/Panel29" unique_id=1498087846]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Inventory
+Item"
+label_settings = SubResource("LabelSettings_tmp5f")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel30" type="Panel" parent="VBoxContainer/InventoryGrid" unique_id=1166932772]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/InventoryGrid/Panel30" unique_id=268991010]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Inventory
+Item"
+label_settings = SubResource("LabelSettings_tmp5f")
+horizontal_alignment = 1
+vertical_alignment = 1

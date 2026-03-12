@@ -5,23 +5,17 @@ extends BoxContainer
 @onready var table_grid: GridContainer = %TableSlotContainer
 @onready var info_panel: PanelContainer = %InfoPanel
 
-func _ready():
-	var index = 0
-	for child in table_grid.get_children():
-		if child is Panel and "slot_index" in child:
-			child.slot_index = index
-			index += 1
+var selected_inventory_slot = null
 		
 func _physics_process(delta: float):
 	input_component.update()
 	if input_component.mouse_clicked:
-		for child in table_grid.get_children():
-			if child is Panel:
-				var global_rect = child.get_global_rect()
-				if global_rect.has_point(input_component.mouse_position):
-					print("Clicked on slot:", child.slot_index)
-					info_panel.update(child.item, child.contents)
-					
+		var selected = table_grid.select(input_component.mouse_position)
+		if selected != null:
+			info_panel.update(selected.item, selected.contents)
+	if input_component.debug_automation_advance_pressed:
+		automation_tick(delta)
 
 func automation_tick(delta):
+	print("automation advanced")
 	pass

@@ -4,6 +4,7 @@ var move_direction: Vector2 = Vector2.ZERO
 
 var interact_pressed: bool = false
 var inventory_pressed: bool = false
+var debug_automation_advance_pressed: bool = false
 
 
 var mouse_position: Vector2 = Vector2.ZERO
@@ -15,6 +16,9 @@ func update():
     
     interact_pressed = Input.is_action_just_pressed("ui_select")
     inventory_pressed = Input.is_action_just_pressed("ui_inventory")
-    
+
+    debug_automation_advance_pressed = Input.is_action_just_pressed("debug_automation_advance")
+
     mouse_position = get_viewport().get_mouse_position()
     mouse_clicked = Input.is_action_just_pressed("click")
+
