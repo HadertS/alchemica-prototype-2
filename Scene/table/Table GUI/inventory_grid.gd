@@ -2,13 +2,6 @@ extends GridContainer
 
 var selected
 
-func _ready():
-	var index = 0
-	for child in get_children():
-		if child is Panel and "slot_index" in child:
-			child.slot_index = index
-			index += 1
-
 func select(mouse_position):
 	for child in get_children():
 		if child is Panel:
@@ -16,13 +9,12 @@ func select(mouse_position):
 			if global_rect.has_point(mouse_position):
 				if selected != child:
 					deselect()
-					print("Clicked on slot:", child.slot_index)
 					child.modulate = Color(0.7, 0.85, 1.0, 1.0) # Light blue tint
 					selected = child
 					return selected
 				else:
 					deselect()
-				return selected
+					return selected
 
 func deselect():
 	if selected != null:

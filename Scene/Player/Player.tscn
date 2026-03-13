@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://dkb7o26qa3s5y"]
 
-[ext_resource type="Script" uid="uid://cowv4uwt1ie44" path="res://Script/Component/Input/input_component.gd" id="1_dsw18"]
+[ext_resource type="Script" uid="uid://cowv4uwt1ie44" path="res://Scene/Component/Input/input_component.gd" id="1_dsw18"]
 [ext_resource type="Script" uid="uid://b7dogybbs6mp8" path="res://Scene/Player/player.gd" id="1_s60e6"]
-[ext_resource type="Script" uid="uid://dh4p5icbb8ey2" path="res://Script/Component/Movement/movement_component.gd" id="3_e35vl"]
-[ext_resource type="Script" uid="uid://du44dh37jbunj" path="res://Script/Component/Interactor/interactor_component.gd" id="4_g0r71"]
-[ext_resource type="Script" uid="uid://mde7jmwnslql" path="res://Script/Component/Inventory/inventory_component.gd" id="5_88wa8"]
+[ext_resource type="Script" uid="uid://dh4p5icbb8ey2" path="res://Scene/Component/Movement/movement_component.gd" id="3_e35vl"]
+[ext_resource type="Script" uid="uid://du44dh37jbunj" path="res://Scene/Component/Interactor/interactor_component.gd" id="4_g0r71"]
+[ext_resource type="Script" uid="uid://mde7jmwnslql" path="res://Scene/Component/Inventory/inventory_component.gd" id="5_88wa8"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_p7e0v"]
 

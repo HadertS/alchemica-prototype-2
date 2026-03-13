@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://dd47nqvkaaie1"]
 
-[ext_resource type="Script" uid="uid://bxsc2t3isquln" path="res://Scene/Table/table.gd" id="1_0fxme"]
-[ext_resource type="Script" uid="uid://dkfe3g53p3eep" path="res://Script/Component/Interactable/interactable_component.gd" id="2_t2dyc"]
-[ext_resource type="Script" uid="uid://scrn4h2met3q" path="res://Scene/Table/action_open_table_screen.gd" id="3_d1yfk"]
+[ext_resource type="Script" uid="uid://dl571a214iagq" path="res://Scene/Table/table.gd" id="1_0fxme"]
+[ext_resource type="Script" uid="uid://dkfe3g53p3eep" path="res://Scene/Component/Interactable/interactable_component.gd" id="2_t2dyc"]
+[ext_resource type="Script" uid="uid://b1vfobtelsub" path="res://Scene/Table/action_open_table_screen.gd" id="3_d1yfk"]
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_boox8"]
 
